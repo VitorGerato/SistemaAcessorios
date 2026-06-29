@@ -1,0 +1,63 @@
+<!-- Página principal para realizar reservas de itens disponíveis. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reservas</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <script>
+    // Verifica se o usuário está logado consultando o backend
+    fetch("php/check_sessao.php")
+      .then(res => {
+        if (res.status !== 200) {
+          // Redireciona para a página de login caso não esteja logado
+          window.location.href = "login.html";
+        }
+      })
+      .catch(() => {
+        // Em caso de erro de rede, também redireciona como precaução
+        window.location.href = "login.html";
+      });
+  </script>
+  
+  <!-- Layout principal da página de perfil do usuário -->
+  <div class="layout">
+
+    <!-- Menu lateral fixo à esquerda -->
+    <div class="sidebar">
+      <div>
+        <img src="img/logoEscola.png" alt="Logo da Escola" class="logo-img">
+        <h2>Menu</h2>
+        <button onclick="window.location.href='reserva.html'">Reservas</button>
+        <button onclick="window.location.href='perfil.html'">Perfil</button>
+      </div>
+      <button onclick="window.location.href='login.html'">Sair</button>
+    </div>
+
+    <!-- Conteúdo principal da página -->
+    <div class="main">
+      <h1>Itens</h1>
+
+      <!-- Filtros de busca por nome e status -->
+      <div class="filtros">
+        <input type="text" id="filtro-nome" placeholder="Buscar por nome">
+        <select id="filtro-status">
+          <option value="todos">Todos</option>
+          <option value="disponivel">Disponíveis</option>
+          <option value="indisponivel">Indisponíveis</option>
+        </select>
+      </div>
+
+      <!-- Container para os cards de itens -->
+      <div class="grid-itens" id="grid-itens"></div>
+    </div>
+  </div>
+
+  <!-- Script principal da tela de reservas -->
+  <script src="js/reserva.js"></script>
+
+</body>
+</html>

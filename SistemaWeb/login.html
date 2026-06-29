@@ -1,0 +1,27 @@
+<!-- Página de login do sistema. Permite que funcionários acessem o sistema de reservas. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <!-- Container principal da tela de login -->
+  <div class="login-container">
+    <h2 class="titulo">Login</h2>
+    <!-- Caixa de entrada de dados para login -->
+    <div class="login-box">
+      <input type="text" id="registro" placeholder="Registro de Empregado" />
+      <input type="password" id="senha" placeholder="Senha" />
+      <button id="acessar">Acessar</button>
+      <div class="esqueci-senha">
+        <a href="esqueci_senha.html">Esqueci minha senha</a>
+      </div>
+      <p id="erro" class="mensagem-erro"></p>
+    </div>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+</html>

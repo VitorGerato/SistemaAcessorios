@@ -1,0 +1,62 @@
+# Sistema de Acessórios - Instruções de uso
+ *********************************************************************************************************************
+ *  Este guia é dedicado aos funcionários da empresa responsável pelo oferecimento do software,caso precise de ajuda *  
+ *  para configuração ou possivel problemas com o funcionamento do aplicativo, entrar em contato com o suporte!        *     
+ *********************************************************************************************************************
+
+*** PARTE 1: INSTALAÇÃO E CONFIGURAÇÃO DO BANCO DE DADOS ***
+
+## 1. Pré-requisitos:
+- Windows com XAMPP instalado
+- MySQL ativado pelo XAMPP
+- Possuir um descompactador de arquivos
+
+## 2. Configurando o banco no phpMyAdmin:
+1. Abra o XAMPP e inicie os serviços APACHE e MySQL
+2. Vá para: http://localhost/phpmyadmin
+3. Clique em "Novo" no canto superior esquerdo do menu lateral
+4. Crie um novo banco chamado 'db_sistema'
+4. Selecione importar na barra superior de opções e o arquivo "db_sistema.sql" presente na pasta de instalação do sistema de acessorios
+5. Clique em "Executar" para importar o banco
+6. Retorne ao Menu principal do phpMyAdmin e clique em 'Contas de usuário'
+7. Para o ultimo usuario que aparecer na listagem, clique em 'Editar Privilégios' e depois 'Change password'
+8. Digite a senha 'adm6402' nos dois campos de senha e clique em 'Executar'
+
+## 3. Alterando a senha no XAMPP:
+1. Encontre a pasta do XAMPP (geralmente na raiz da pasta "C:")
+2. Encontre a pasta phpMyAdmin dentro da pasta xampp
+3. Encontre e execute o arquivo "config.inc.php" (pode ser com bloco de notas)
+4. Busque pela linha "$cfg['Servers'][$i]['password'] = '';" dentro do arquivo
+5. Insira a senha "adm6402" dentro das aspas simples vazias
+6. Salve e feche o arquivo
+
+## 4. Como executar o sistema:
+1. Descompile o arquivo SistemaAcessorios.zip em algum diretório como a Área de Trabalho
+2. Dê dois cliques em "app.exe" para abrir o sistema
+3. Use seu RE e senha para login
+4. Use normalmente
+
+## 5. Informações técnicas:
+- Banco: db_sistema
+- Usuário MySQL: root
+- Senha: adm789
+
+*** PARTE 2: IMPORTAÇÃO DA PÁGINA WEB ***
+
+## 1. Pré-requisitos:
+- Ter instalado o XAMPP
+- Concluído os passos da PARTE 1
+- Possuir um descompactador de arquivos
+
+## 2. Importação do site para máquina local:
+1. Abra novamente a pasta do XAMPP
+2. Localize e abra o diretório 'htdocs'
+3. Descompile e insira a pasta do SistemaWeb.zip dentro do diretório
+3. Acesse em seu navegador: "localhost/SistemaWeb/login.html"
+4. Use o site normalmente
+
+## Descompactador:
+- Caso não possua um instalado na máquina recomenda-se fortemente o uso do '7Zip', que pode ser obtido pelo link: 'http://7zip.rnbastos.com/'
+
+## Suporte:
+Email: suporteagv@gmail.com
