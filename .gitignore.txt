@@ -1,4 +1,0 @@
-*.zip
-*.log
-Thumbs.db
-.DS_Store
